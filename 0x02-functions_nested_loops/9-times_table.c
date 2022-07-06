@@ -4,29 +4,39 @@
 */
 void times_table(void)
 {
-int x, y, k;
-for (x + 0; x < 10; x++)
+int a = 0;
+int b;
+int rep;
+while (a <= 9)
 {
-for (y = 0; y < 10; y++)
-k = x * y;
-if (y == 0)
-_putchar(k + '0');
-if (y != 0 && k < 10)
+b = 0;
+while (b <= 9)
+{
+rep = a * b;
+if (b == 0)
+{
+_putchar('0' + rep);
+}
+else if (rep < 10)
+{
+_putchar(' ');
+_putchar('0' + rep);
+}
+else
+{
+_putchar('0' + rep / 10);
+_putchar('0' + rep % 10);
+}
+if (b < 9)
 {
 _putchar(',');
 _putchar(' ');
-_putchar(' ');
-_putchar(k + '0');
 }
-else if (k >= 10)
-{
-_putchar(',');
-_putchar(' ');
-_putchar((k / 10) + '0');
-_putchar((k % 10) + '0');
-}
+b++;
 }
 _putchar('\n');
+a++;
+}
 }
 
 
