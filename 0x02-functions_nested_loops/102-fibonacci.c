@@ -9,15 +9,15 @@ int main(void)
 long int i, j, k, next;
 j = 1;
 k = 2;
-for (i = 1; i <= 50; ++l)
+for (i = 1; i <= 50; ++i)
 {
 if (j != 20365011074)
 {
-printf("%ld, ", j);
+printf("%d, ", j);
 }
 else
 {
-printf("%ld\n", j);
+printf("%d\n", j);
 }
 next = j + k;
 j = k;
