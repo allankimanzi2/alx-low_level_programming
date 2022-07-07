@@ -1,14 +1,17 @@
 #include "main.h"
 /**
-*print_most_numbers - prints most numbers
+*print_most_numbers - prints 0-9 excluding 2 and 4
+*Description: use _putchar twice
 */
 void print_most_numbers(void)
 {
-int x;
-for (x = 0; x < 10; x++)
+int i;
+i = 0;
+while (i < 10)
 {
-if (x != 2 && x != 4)
-_putchar(x + '0');
+if (i != 2 && i != 4)
+_putchar(i + '0');
+i++
 }
 _putchar('\n');
 }
