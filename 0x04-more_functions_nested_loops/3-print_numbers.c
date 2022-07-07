@@ -1,17 +1,14 @@
 #include "main.h"
 /**
-*print_numbers - prints 0 to 9 with new line
-*only use _putchar
-*Description: use _putchar twice and print value 0-9
+*print_numbers - print numbers
+*Return: Always 0 (Success)
 */
 void print_numbers(void)
 {
 int y;
-y = 0;
-while (y < 10)
+for (y = 48; y < 58; y++)
 {
-_putchar(y + '0');
-y++;
+_putchar(y);
 }
 _putchar('\n');
 }
