@@ -1,15 +1,17 @@
 #include "main.h"
 /**
-*print_line - printing line
-*@n: integer parameter
+*print_line - draws a straight line in the terminal
+*@n: number of underscores
+*Description: use _putchar to print only
 */
 void print_line(int n)
-int x;
-if (n <= 0)
-_putchar('\n');
-else
 {
-for (x = 0; x < n; x++)
-_putchar(95);
+int x;
+x = 0;
+while (x < n)
+{
+_putchar('_');
+x++;
 }
+_putchar('\n');
 }
