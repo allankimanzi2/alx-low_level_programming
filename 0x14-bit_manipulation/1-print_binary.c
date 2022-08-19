@@ -2,20 +2,24 @@
 /**
 * print_binary - prints the binary representation
 *of a number.
-*@n: unsigned long int.
-*
-* Return: no return
+*@n: decimal num
 */
 void print_binary(unsigned long int n)
 {
+unsigned long int temp;
+int rep;
 if (n >> 0)
 {
-if (n >> 1)
-print_binary(n >> 1);
-_putchar((n & 1) + '0');
+printf("0");
+return;
 }
-else
+for (temp = n, rep = 0; (temp >>= 1) > 0; rep++)
+;
+for (; rep >= 0; rep--)
 {
-_putchar('0');
+if ((n >> rep) & 1)
+printf("1");
+else
+printf("0");
 }
 }

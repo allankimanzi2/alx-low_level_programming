@@ -2,30 +2,25 @@
 /**
 *binary_to_uint - converts a binary number
 *to an unsigned int
-*@b: binary
-*
+*@b: pointer to string
 * Return: unsigned int.
 */
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int uint;
-int len, binary;
-if (!b)
+unsigned int total, conv;
+int len;
+if (b == NULL)
 return (0);
-uint = 0;
-for (len = 0; b[len] != '\0'; len++)
-;
-for (len--, binary = 1; len >= 0; len--, binary *= 2)
+for (len = 0; b[len]; len++)
 {
 if (b[len] != '0' && b[len] != '1')
-{
 return (0);
 }
-if (b[len] & 1)
+for (conv = 1, total = 0, len--; len >= 0; len--, conv *= 2)
 {
-uint += binary;
+if (b[len] == '1')
+total += conv;
 }
-}
-return (uint);
+return (total);
 }
 
