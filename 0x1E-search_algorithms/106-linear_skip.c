@@ -30,7 +30,7 @@ jump->index, jump->n);
 }
 else
 {
-	while (jump->next != NULL)
+while (jump->next != NULL)
 jump = jump->next;
 }
 }
