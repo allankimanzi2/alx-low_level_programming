@@ -27,15 +27,15 @@ printf("Value checked array[%ld] = [%d]\n", i, array[i]);
 else
 {
 																	printf("Value checked array[%ld] is out of range\n", i);
-																	break;
-																	}
+break;
+}
 if (array[i] == value)
-																	return (i);
-																	if (array[i] > value)
-																	r = i - 1;
-																	else
-																	l = i + 1;
-																	}
+return (i);
+if (array[i] > value)
+r = i - 1;
+else
+l = i + 1;
+}
 
 return (-1);
 }

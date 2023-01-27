@@ -24,15 +24,15 @@ for (node = jump = list; jump->next != NULL && jump->n < value;)
 node = jump;
 if (jump->express != NULL)
 {
-																	jump = jump->express;
-																	printf("Value checked at index [%ld] = [%d]\n",
-																	jump->index, jump->n);
-																	}
+	jump = jump->express;
+printf("Value checked at index [%ld] = [%d]\n",
+jump->index, jump->n);
+}
 else
-																{
-																	while (jump->next != NULL)
-																	jump = jump->next;
-																	}
+{
+	while (jump->next != NULL)
+jump = jump->next;
+}
 }
 
 printf("Value found between indexes [%ld] and [%ld]\n",

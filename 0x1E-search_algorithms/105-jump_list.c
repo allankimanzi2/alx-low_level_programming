@@ -24,15 +24,15 @@ if (list == NULL || size == 0)
 step = 0;
 step_size = sqrt(size);
 for (node = jump = list; jump->index + 1 < size && jump->n < value;)
-									{
+{
 node = jump;
 for (step += step_size; jump->index < step; jump = jump->next)
-																	{
-																	if (jump->index + 1 == size)
+{
+if (jump->index + 1 == size)
 break;
-																	}
+}
 printf("Value checked at index [%ld] = [%d]\n", jump->index, jump->n);
-																	}
+}
 
 printf("Value found between indexes [%ld] and [%ld]\n",
 node->index, jump->index);

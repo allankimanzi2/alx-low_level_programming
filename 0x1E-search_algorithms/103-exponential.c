@@ -17,7 +17,7 @@ int _binary_search(int *array, size_t left, size_t right, int value)
 {
 		size_t i;
 
-	if (array == NULL)
+if (array == NULL)
 return (-1);
 
 while (right >= left)
@@ -28,13 +28,13 @@ printf("%d, ", array[i]);
 printf("%d\n", array[i]);
 
 i = left + (right - left) / 2;
-																	if (array[i] == value)
-																	return (i);
-																	if (array[i] > value)
-																	right = i - 1;
-																	else
-																	left = i + 1;
-																	}
+if (array[i] == value)
+	return (i);
+if (array[i] > value)
+	right = i - 1;
+else
+	left = i + 1;
+}
 
 return (-1);
 }
